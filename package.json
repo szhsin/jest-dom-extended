@@ -1,0 +1,74 @@
+{
+  "name": "jest-dom-extended",
+  "version": "0.0.1",
+  "description": "Extend and patch @testing-library/jest-dom matchers",
+  "author": "Zheng Song",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szhsin/jest-dom-extended.git"
+  },
+  "type": "module",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.mjs",
+  "types": "./types/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist/",
+    "types/"
+  ],
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "require": "./dist/cjs/index.cjs",
+      "default": "./dist/esm/index.mjs"
+    }
+  },
+  "scripts": {
+    "start": "run-p watch \"types -- --watch\"",
+    "bundle": "rollup -c",
+    "watch": "rollup -c -w",
+    "types": "tsc",
+    "clean": "rm -Rf dist types",
+    "prepare": "rm -Rf types/__tests__",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "pret": "prettier -c .",
+    "pret:fix": "prettier -w .",
+    "build": "run-s pret clean types lint bundle"
+  },
+  "peerDependencies": {
+    "@testing-library/jest-dom": "^6"
+  },
+  "dependencies": {
+    "csstype": "^3.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.0.3",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "babel-plugin-pure-annotations": "^0.1.2",
+    "deplift": "^1.0.1",
+    "eslint": "^9.29.0",
+    "eslint-config-prettier": "^10.1.5",
+    "globals": "^16.2.0",
+    "jest": "^30.0.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.6.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "rollup": "^4.44.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.35.0",
+    "vitest": "^3.2.4"
+  }
+}
