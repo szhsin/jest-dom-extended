@@ -11,7 +11,7 @@ export default tseslint.config(
   prettier,
   {
     files: ['**/*.?(c|m)js'],
-    ...tseslint.configs.disableTypeChecked
+    ...tseslint.configs.disableTypeChecked,
   },
   {
     ignores: [
@@ -22,8 +22,8 @@ export default tseslint.config(
       '**/static/',
       '**/.next/',
       '**/.docusaurus/',
-      '**/*.d.ts'
-    ]
+      '**/*.d.ts',
+    ],
   },
   {
     languageOptions: {
@@ -31,18 +31,18 @@ export default tseslint.config(
       sourceType: 'module',
       parserOptions: {
         projectService: {
-          allowDefaultProject: ['*.?(c|m)js', 'examples/*.?(c|m)js']
+          allowDefaultProject: ['*.?(c|m)js', 'examples/*.?(c|m)js'],
         },
         tsconfigRootDir: import.meta.dirname,
         ecmaFeatures: {
-          jsx: true
-        }
+          jsx: true,
+        },
       },
       globals: {
         ...globals.browser,
         ...globals.node,
-        ...globals.vitest
-      }
+        ...globals.vitest,
+      },
     },
     rules: {
       'no-console': ['error', { allow: ['warn', 'error'] }],
@@ -52,14 +52,14 @@ export default tseslint.config(
       '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '^_\\d?$' }],
       '@typescript-eslint/no-unused-expressions': [
         'error',
-        { allowShortCircuit: true, allowTernary: true }
-      ]
-    }
+        { allowShortCircuit: true, allowTernary: true },
+      ],
+    },
   },
   {
     files: ['examples/**/*'],
     rules: {
-      'no-console': 0
-    }
-  }
+      'no-console': 0,
+    },
+  },
 );

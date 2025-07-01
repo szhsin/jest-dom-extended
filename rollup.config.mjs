@@ -11,12 +11,12 @@ const config = {
     nodeResolve({ extensions: ['.ts', '.tsx', '.js', '.jsx'] }),
     babel({
       babelHelpers: 'bundled',
-      extensions: ['.ts', '.tsx', '.js', '.jsx']
-    })
+      extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    }),
   ],
   treeshake: {
     moduleSideEffects: false,
-    propertyReadSideEffects: false
+    propertyReadSideEffects: false,
   },
   input: ['src/index.ts'],
   output: [
@@ -25,15 +25,15 @@ const config = {
       format: 'cjs',
       interop: 'auto',
       entryFileNames: '[name].cjs',
-      preserveModules: true
+      preserveModules: true,
     },
     {
       dir: 'dist/esm',
       format: 'es',
       entryFileNames: '[name].mjs',
-      preserveModules: true
-    }
-  ]
+      preserveModules: true,
+    },
+  ],
 };
 
 export default config;
