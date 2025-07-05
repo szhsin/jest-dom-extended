@@ -1,3 +1,4 @@
 import type { Properties } from 'csstype';
-declare function toHaveStyle(this: jest.MatcherContext, element: unknown, expectedStyle: Properties): jest.CustomMatcherResult;
+type Style = Partial<Record<keyof Properties, string>>;
+declare function toHaveStyle(this: unknown, element: unknown, expected: Style | string): unknown;
 export { toHaveStyle };

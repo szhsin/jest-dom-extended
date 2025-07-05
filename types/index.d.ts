@@ -1,1 +1,1 @@
-export {};
+export { toHaveStyle } from './matchers/toHaveStyle';

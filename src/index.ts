@@ -1,3 +1,1 @@
-import { toHaveStyle } from './matchers/toHaveStyle';
-
-expect.extend({ toHaveStyle });
+export { toHaveStyle } from './matchers/toHaveStyle';

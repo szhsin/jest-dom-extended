@@ -6,7 +6,12 @@ import { babel } from '@rollup/plugin-babel';
  * @type {import('rollup').RollupOptions}
  */
 const config = {
-  external: ['@testing-library/jest-dom', '@testing-library/jest-dom/matchers'],
+  external: [
+    '@testing-library/jest-dom',
+    '@testing-library/jest-dom/matchers',
+    'vitest',
+    '@vitest/expect',
+  ],
   plugins: [
     nodeResolve({ extensions: ['.ts', '.tsx', '.js', '.jsx'] }),
     babel({
@@ -18,7 +23,7 @@ const config = {
     moduleSideEffects: false,
     propertyReadSideEffects: false,
   },
-  input: ['src/index.ts'],
+  input: ['src/index.ts', 'src/jest.ts', 'src/vitest.ts'],
   output: [
     {
       dir: 'dist/cjs',
