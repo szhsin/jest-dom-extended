@@ -1,5 +1,1 @@
-import { toHaveStyle } from './matchers/toHaveStyle.mjs';
-
-expect.extend({
-  toHaveStyle
-});
+export { toHaveStyle } from './matchers/toHaveStyle.mjs';

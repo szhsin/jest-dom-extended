@@ -2,6 +2,6 @@
 
 var toHaveStyle = require('./matchers/toHaveStyle.cjs');
 
-
-
-exports.toHaveStyle = toHaveStyle.toHaveStyle;
+expect.extend({
+  toHaveStyle: toHaveStyle.toHaveStyle
+});

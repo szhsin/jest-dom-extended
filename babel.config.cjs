@@ -12,7 +12,7 @@ module.exports = {
     pureGetters: true,
     setComputedProperties: true,
     setSpreadProperties: true,
-    skipForOfIteratorClosing: true
+    skipForOfIteratorClosing: true,
   },
   plugins: ['pure-annotations'],
   presets: [
@@ -22,11 +22,11 @@ module.exports = {
         bugfixes: true,
         include: [
           '@babel/plugin-transform-nullish-coalescing-operator',
-          '@babel/plugin-transform-optional-catch-binding'
-        ]
-      }
+          '@babel/plugin-transform-optional-catch-binding',
+        ],
+      },
     ],
     ['@babel/preset-react', { runtime: 'automatic' }],
-    ['@babel/preset-typescript', { isTSX: true, allExtensions: true }]
-  ]
+    ['@babel/preset-typescript', { isTSX: true, allExtensions: true }],
+  ],
 };
