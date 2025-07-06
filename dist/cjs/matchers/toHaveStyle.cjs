@@ -2,8 +2,9 @@
 
 var matchers = require('@testing-library/jest-dom/matchers');
 
-const COLOR_PROPERTIES = ['color', 'backgroundColor'];
+const COLOR_PROPERTIES = ['color', 'backgroundColor', 'borderTopColor', 'borderRightColor', 'borderBottomColor', 'borderLeftColor', 'outlineColor', 'caretColor'];
 const COLOR_MAP = {
+  transparent: 'rgba(0, 0, 0, 0)',
   black: 'rgb(0, 0, 0)',
   white: 'rgb(255, 255, 255)',
   red: 'rgb(255, 0, 0)',
@@ -44,7 +45,7 @@ function toHaveStyle(element, expected) {
   };
   for (const prop of COLOR_PROPERTIES) {
     const val = transformed[prop];
-    const rgb = COLOR_MAP[val];
+    const rgb = val && COLOR_MAP[val];
     if (rgb) transformed[prop] = rgb;
   }
   return baseToHaveStyle.call(this, element, transformed);

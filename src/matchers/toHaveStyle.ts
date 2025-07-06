@@ -1,9 +1,19 @@
 import type { Properties, DataType } from 'csstype';
 import { toHaveStyle as _toHaveStyle } from '@testing-library/jest-dom/matchers';
 
-const COLOR_PROPERTIES: (keyof Properties)[] = ['color', 'backgroundColor'];
+const COLOR_PROPERTIES: (keyof Properties)[] = [
+  'color',
+  'backgroundColor',
+  'borderTopColor',
+  'borderRightColor',
+  'borderBottomColor',
+  'borderLeftColor',
+  'outlineColor',
+  'caretColor',
+];
 
 const COLOR_MAP: Partial<Record<DataType.NamedColor, string>> = {
+  transparent: 'rgba(0, 0, 0, 0)',
   black: 'rgb(0, 0, 0)',
   white: 'rgb(255, 255, 255)',
   red: 'rgb(255, 0, 0)',
@@ -56,7 +66,7 @@ function toHaveStyle(this: unknown, element: unknown, expected: Style | string) 
 
   for (const prop of COLOR_PROPERTIES) {
     const val = transformed[prop];
-    const rgb = COLOR_MAP[val as DataType.NamedColor];
+    const rgb = val && COLOR_MAP[val as DataType.NamedColor];
     if (rgb) transformed[prop] = rgb;
   }
 
