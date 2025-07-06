@@ -1,6 +1,6 @@
 {
   "name": "jest-dom-extended",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Extend and patch @testing-library/jest-dom matchers",
   "author": "Zheng Song",
   "license": "MIT",

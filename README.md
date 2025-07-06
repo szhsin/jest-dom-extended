@@ -17,11 +17,16 @@ npm install -D jest-dom-extended
 
 ## Usage
 
+Load the setup file after `@testing-library/jest-dom` in your test configuration.
+
 ### Jest
 
 ```json
 {
-  "setupFilesAfterEnv": ["@testing-library/jest-dom", "jest-dom-extended/jest"]
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-dom",
+    "jest-dom-extended/jest"
+  ]
 }
 ```
 
@@ -30,7 +35,10 @@ npm install -D jest-dom-extended
 ```js
 export default defineConfig({
   test: {
-    setupFiles: ["@testing-library/jest-dom", "jest-dom-extended/vitest"],
+    setupFiles: [
+      "@testing-library/jest-dom",
+      "jest-dom-extended/vitest",
+    ],
   },
 });
 ```
