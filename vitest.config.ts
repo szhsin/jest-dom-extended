@@ -9,7 +9,7 @@ export default defineConfig({
       provider: 'v8',
       enabled: true,
       reportsDirectory: './coverage/vitest',
-      include: ['src/matchers/'],
+      include: ['src/matchers/**/*.ts?(x)'],
     },
     setupFiles: ['@testing-library/jest-dom', './src/vitest.ts'],
   },
