@@ -12,7 +12,7 @@ const COLOR_PROPERTIES: (keyof Properties)[] = [
   'caretColor',
 ];
 
-const COLOR_MAP: Partial<Record<DataType.NamedColor, string>> = {
+const COLOR_MAP: Partial<Record<DataType.NamedColor | 'transparent', string>> = {
   transparent: 'rgba(0, 0, 0, 0)',
   black: 'rgb(0, 0, 0)',
   white: 'rgb(255, 255, 255)',
