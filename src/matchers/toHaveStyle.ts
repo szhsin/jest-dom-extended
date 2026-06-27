@@ -4,6 +4,7 @@ import { toHaveStyle as _toHaveStyle } from '@testing-library/jest-dom/matchers'
 const COLOR_PROPERTIES: (keyof Properties)[] = [
   'color',
   'backgroundColor',
+  'borderColor',
   'borderTopColor',
   'borderRightColor',
   'borderBottomColor',
