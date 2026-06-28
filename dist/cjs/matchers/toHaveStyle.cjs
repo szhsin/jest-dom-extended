@@ -2,7 +2,7 @@
 
 var matchers = require('@testing-library/jest-dom/matchers');
 
-const COLOR_PROPERTIES = ['color', 'backgroundColor', 'borderTopColor', 'borderRightColor', 'borderBottomColor', 'borderLeftColor', 'outlineColor', 'caretColor'];
+const COLOR_PROPERTIES = ['color', 'backgroundColor', 'borderColor', 'borderTopColor', 'borderRightColor', 'borderBottomColor', 'borderLeftColor', 'outlineColor', 'caretColor'];
 const COLOR_MAP = {
   transparent: 'rgba(0, 0, 0, 0)',
   black: 'rgb(0, 0, 0)',
