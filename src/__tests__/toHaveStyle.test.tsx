@@ -13,8 +13,6 @@ describe('toHaveStyle', () => {
           borderLeftColor: 'purple',
           outlineColor: 'blue',
           caretColor: 'transparent',
-
-          // Color properties do not need to be patched
           columnRuleColor: 'yellow',
           textEmphasisColor: 'white',
           textDecorationColor: 'red',
@@ -33,8 +31,6 @@ describe('toHaveStyle', () => {
       borderLeftColor: 'purple',
       outlineColor: 'blue',
       caretColor: 'transparent',
-
-      // Color properties do not need to be patched
       columnRuleColor: 'yellow',
       textEmphasisColor: 'white',
       textDecorationColor: 'red',
