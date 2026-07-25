@@ -1,6 +1,5 @@
-import { expect } from 'vitest';
-import { toHaveStyle } from './matchers/toHaveStyle.mjs';
-
-expect.extend({
-  toHaveStyle
-});
+import { toHaveStyle } from "./matchers/toHaveStyle.mjs";
+import { expect } from "vitest";
+//#region src/vitest.ts
+expect.extend({ toHaveStyle });
+//#endregion

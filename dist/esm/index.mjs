@@ -1,1 +1,2 @@
-export { toHaveStyle } from './matchers/toHaveStyle.mjs';
+import { toHaveStyle } from "./matchers/toHaveStyle.mjs";
+export { toHaveStyle };

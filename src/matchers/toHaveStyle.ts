@@ -11,6 +11,9 @@ const COLOR_PROPERTIES: (keyof Properties)[] = [
   'borderLeftColor',
   'outlineColor',
   'caretColor',
+  'columnRuleColor',
+  'textEmphasisColor',
+  'textDecorationColor',
 ];
 
 const COLOR_MAP: Partial<Record<DataType.NamedColor | 'transparent', string>> = {
