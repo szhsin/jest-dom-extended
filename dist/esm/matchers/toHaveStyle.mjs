@@ -1,5 +1,5 @@
 import { toHaveStyle } from "@testing-library/jest-dom/matchers";
-//#region src/matchers/toHaveStyle.ts
+// src/matchers/toHaveStyle.ts
 const COLOR_PROPERTIES = [
 	"color",
 	"backgroundColor",
@@ -57,5 +57,4 @@ function toHaveStyle$1(element, expected) {
 	}
 	return baseToHaveStyle.call(this, element, transformed);
 }
-//#endregion
 export { toHaveStyle$1 as toHaveStyle };
