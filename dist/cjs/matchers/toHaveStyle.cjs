@@ -1,6 +1,6 @@
 "use strict";
 let _testing_library_jest_dom_matchers = require("@testing-library/jest-dom/matchers");
-//#region src/matchers/toHaveStyle.ts
+// src/matchers/toHaveStyle.ts
 const COLOR_PROPERTIES = [
 	"color",
 	"backgroundColor",
@@ -58,5 +58,4 @@ function toHaveStyle(element, expected) {
 	}
 	return baseToHaveStyle.call(this, element, transformed);
 }
-//#endregion
 exports.toHaveStyle = toHaveStyle;
